@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunyoro Music Flavour | Premium Music Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="bmf.png">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon"><img src="bmf.png" alt="Bunyoro Music Flavour Logo"></div>
+                <div class="logo-text">Bunyoro Music</div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a class="nav-link active" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="audio.html">Audio</a></li>
+                <li><a class="nav-link" href="videos.html">Videos</a></li>
+                <li><a class="nav-link" href="upload.html">Upload</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="search-container">
+                <input type="text" placeholder="Search music or artist...">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1 class="hero-title">Discover Bunyoro Music Flavour</h1>
+                <p class="hero-description">Experience the rich cultural heritage of Bunyoro through music. Stream, download, and enjoy authentic sounds from talented artists.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="audio.html" class="btn btn-primary">Explore Music</a>
+                    <a href="upload.html" class="btn btn-secondary">Upload Music</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Development Notice -->
+        <section class="section section-dark">
+            <div class="container">
+                <div class="dev-notice">
+                    <p>Note: Bunyoro Music Flavour is currently in development. We appreciate your understanding as we finalize features and content.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Featured Audio -->
+        <section class="section section-dark">
+            <div class="container">
+                <h2 class="section-title">Featured Audio Tracks</h2>
+                <div class="music-grid">
+                    <div class="music-card">
+                        <img src="img1.jpg" class="music-thumb" alt="Music Thumbnail">
+                        <div class="music-info">
+                            <h3 class="music-title">Traditional Bunyoro Rhythm</h3>
+                            <p class="music-artist">Omukama Band</p>
+                            <div class="music-actions">
+                                <button class="action-btn"><i class="fas fa-play"></i> Play</button>
+                                <button class="action-btn"><i class="fas fa-download"></i> Download</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="music-card">
+                        <img src="img8.jpg" class="music-thumb" alt="Music Thumbnail">
+                        <div class="music-info">
+                            <h3 class="music-title">Cultural Fusion Beat</h3>
+                            <p class="music-artist">Heritage Sounds</p>
+                            <div class="music-actions">
+                                <button class="action-btn"><i class="fas fa-play"></i> Play</button>
+                                <button class="action-btn"><i class="fas fa-download"></i> Download</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="music-card">
+                        <img src="img9.jpg" class="music-thumb" alt="Music Thumbnail">
+                        <div class="music-info">
+                            <h3 class="music-title">Modern Bunyoro Mix</h3>
+                            <p class="music-artist">New Generation</p>
+                            <div class="music-actions">
+                                <button class="action-btn"><i class="fas fa-play"></i> Play</button>
+                                <button class="action-btn"><i class="fas fa-download"></i> Download</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="audio.html" class="btn btn-outline">View All Audio</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Most Popular YouTube Videos -->
+        <section class="section section-darker">
+            <div class="container">
+                <h2 class="section-title">Most Popular Videos</h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: var(--gray-light);">Top 6 most-viewed videos from our YouTube channel</p>
+                
+                <div id="youtube-videos-container" class="video-container">
+                    <div class="loading-spinner">
+                        <i class="fas fa-spinner"></i>
+                        <p>Loading popular videos from YouTube...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Featured Videos -->
+        <section class="section video-section">
+            <div class="container">
+                <h2 class="section-title">Latest Music Videos</h2>
+                <div class="video-container">
+                    <div class="video-card">
+                        <img src="img7.jpg" class="video-thumb" alt="Video Thumbnail">
+                        <div class="video-info">
+                            <h3 class="video-title">Bunyoro Cultural Performance</h3>
+                            <p class="video-artist">Traditional Artists</p>
+                            <button class="action-btn"><i class="fab fa-youtube"></i> Watch Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="video-card">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="video-thumb" alt="Video Thumbnail">
+                        <div class="video-info">
+                            <h3 class="video-title">Live Concert Recording</h3>
+                            <p class="video-artist">Bunyoro Stars</p>
+                            <button class="action-btn"><i class="fab fa-youtube"></i> Watch Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="videos.html" class="btn btn-outline">View All Videos</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Subscription Section -->
+        <section class="section">
+            <div class="container">
+                <div class="subscribe-section">
+                    <h2>Stay Updated With New Releases</h2>
+                    <p>Subscribe to our newsletter to get notifications about new music, events, and updates</p>
+                    <div class="subscribe-form">
+                        <input type="email" class="subscribe-input" placeholder="Enter your email address">
+                        <button class="btn btn-secondary">Subscribe Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bunyoro Music Flavour</h3>
+                    <p>Preserving and promoting Bunyoro music culture through a modern platform that connects artists with audiences worldwide.</p>
+                    <p>Email: info@bunyoromusic.com<br>Phone: +256 762 621 780</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="audio.html">Audio Library</a>
+                    <a href="videos.html">Video Content</a>
+                    <a href="upload.html">Upload Music</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Artist Resources</h3>
+                    <a href="upload.html">How to Upload Music</a>
+                    <a href="javascript:void(0);">Terms of Service</a>
+                    <a href="javascript:void(0);">Privacy Policy</a>
+                    <a href="javascript:void(0);">FAQ</a>
+                </div>
+            </div>
+            
+            <!-- Social Media Links -->
+            <div class="footer-social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                <a href="https://youtube.com/@bunyoro-music-flavour?si=qi2u_wRQRpTKaEwj" class="social-link"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bunyoro Music Flavour. All rights reserved.</p>
+                <div class="footer-creator">
+                    <p>Created by Martin</p>
+                    <p>WhatsApp: 0743703222 / 0762621780</p>
+                    <a href="https://wa.me/256762621780" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contact on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+  <!-- Floating Button -->
+<a href="contact.html" class="float-btn">
+    <i class="fas fa-comment"></i>
+</a>
+
+    <!-- YouTube Player Modal -->
+    <div id="youtube-modal" class="youtube-modal">
+        <div class="youtube-modal-content">
+            <button class="youtube-modal-close" onclick="closeYouTubeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="youtube-player-container">
+                <div id="youtube-player"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

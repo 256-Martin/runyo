@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Music | Bunyoro Music Flavour</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="bmf.png">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles for file upload section */
+        .file-upload-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        .file-upload-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .file-upload-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--gray-light);
+            font-weight: 500;
+        }
+        
+        .file-format-info {
+            color: var(--gray);
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+        }
+        
+        /* Mobile responsive styles */
+        @media (max-width: 768px) {
+            .file-upload-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .file-upload-item {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                    <div class="logo-icon"><img src="bmf.png" alt="Bunyoro Music Flavour Logo"></div>
+                    <div class="logo-text">Bunyoro Music</div>
+                </a>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="audio.html">Audio</a></li>
+                <li><a class="nav-link" href="videos.html">Videos</a></li>
+                <li><a class="nav-link active" href="upload.html">Upload</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="search-container">
+                <input type="text" placeholder="Search music or artist...">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <section class="section section-dark" style="padding-top: 2rem;">
+            <div class="container">
+                <h2 class="section-title">Upload Music</h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: var(--gray-light);">Share your music with the Bunyoro community</p>
+                
+                <div class="form-container">
+                    <form id="upload-form">
+                        <div class="form-group">
+                            <label for="artistName">Your Name</label>
+                            <input type="text" id="artistName" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="songTitle">Song Title</label>
+                            <input type="text" id="songTitle" class="form-control" placeholder="Enter song title" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="songDescription">Description (Optional)</label>
+                            <textarea id="songDescription" class="form-control" rows="4" placeholder="Describe your song"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="songThumbnail">Thumbnail Image</label>
+                            <input type="file" id="songThumbnail" class="form-control" accept="image/*" required>
+                        </div>
+                        
+                        <!-- File Upload Section with Mobile-Friendly Layout -->
+                        <div class="form-group">
+                            <label>Upload Your Music Files <span style="color: var(--secondary);">*</span></label>
+                            <p style="color: var(--gray-light); font-size: 0.9rem; margin-bottom: 1rem;">
+                                <i class="fas fa-info-circle"></i> You must upload at least one audio or video file
+                            </p>
+                            
+                            <div class="file-upload-grid">
+                                <div class="file-upload-item">
+                                    <label for="audioFile" class="file-upload-label">
+                                        <i class="fas fa-music"></i> Audio File (MP3, WAV)
+                                    </label>
+                                    <input type="file" id="audioFile" class="form-control" accept="audio/*">
+                                    <p class="file-format-info">
+                                        Supported formats: MP3, WAV, M4A
+                                    </p>
+                                </div>
+                                
+                                <div class="file-upload-item">
+                                    <label for="videoFile" class="file-upload-label">
+                                        <i class="fas fa-video"></i> Video File
+                                    </label>
+                                    <input type="file" id="videoFile" class="form-control" accept="video/*">
+                                    <p class="file-format-info">
+                                        Supported formats: MP4, MOV, AVI
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div id="file-requirement-message" style="display: none; background: rgba(242, 113, 33, 0.1); border-left: 4px solid var(--secondary); padding: 0.8rem; margin-top: 1rem; border-radius: 4px;">
+                                <p style="color: var(--secondary); margin: 0; font-size: 0.9rem;">
+                                    <i class="fas fa-exclamation-triangle"></i> Please upload at least one audio or video file
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Upload Music</button>
+                    </form>
+                </div>
+                
+                <div style="margin-top: 3rem; background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 10px;">
+                    <h3 style="text-align: center; margin-bottom: 1rem;">Upload Policy</h3>
+                    <ul style="color: var(--gray-light); line-height: 1.8;">
+                        <li>All artists can upload music completely free of charge</li>
+                        <li>We support all Bunyoro artists in sharing their cultural heritage</li>
+                        <li>You must upload at least one audio or video file</li>
+                        <li>Videos are automatically uploaded to our YouTube channel</li>
+                        <li>We promote your music across our platform and social media</li>
+                        <li>You maintain full rights to your creative work</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bunyoro Music Flavour</h3>
+                    <p>Preserving and promoting Bunyoro music culture through a modern platform that connects artists with audiences worldwide.</p>
+                    <p>Email: info@bunyoromusic.com<br>Phone: +256 762 621 780</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="audio.html">Audio Library</a>
+                    <a href="videos.html">Video Content</a>
+                    <a href="upload.html">Upload Music</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Artist Resources</h3>
+                    <a href="upload.html">How to Upload Music</a>
+                    <a href="javascript:void(0);">Terms of Service</a>
+                    <a href="javascript:void(0);">Privacy Policy</a>
+                    <a href="javascript:void(0);">FAQ</a>
+                </div>
+            </div>
+            
+            <!-- Social Media Links -->
+            <div class="footer-social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                <a href="https://youtube.com/@bunyoro-music-flavour?si=qi2u_wRQRpTKaEwj" class="social-link"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bunyoro Music Flavour. All rights reserved.</p>
+                <div class="footer-creator">
+                    <p>Created by Martin</p>
+                    <p>WhatsApp: 0743703222 / 0762621780</p>
+                    <a href="https://wa.me/256762621780" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contact on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Floating Button -->
+    <a href="contact.html" class="float-btn">
+        <i class="fas fa-comment"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('upload-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const audioFile = document.getElementById('audioFile').files[0];
+            const videoFile = document.getElementById('videoFile').files[0];
+            const requirementMessage = document.getElementById('file-requirement-message');
+            
+            // Check if at least one file is uploaded
+            if (!audioFile && !videoFile) {
+                requirementMessage.style.display = 'block';
+                
+                // Scroll to the requirement message
+                requirementMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return false;
+            } else {
+                requirementMessage.style.display = 'none';
+            }
+            
+            // If validation passes, show success message
+            alert('Music uploaded successfully! In a real application, this would connect to the server.');
+            this.reset();
+        });
+
+        // Hide requirement message when user starts selecting files
+        document.getElementById('audioFile').addEventListener('change', function() {
+            document.getElementById('file-requirement-message').style.display = 'none';
+        });
+
+        document.getElementById('videoFile').addEventListener('change', function() {
+            document.getElementById('file-requirement-message').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
